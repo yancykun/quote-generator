@@ -1,0 +1,175 @@
+:root {
+  
+  --clr-background: #525FE1;
+  --clr-primary: #F86F03;
+  --clr-secondary: #FFA41B;
+  --clr-transparent: #FFF6F4;
+
+  --ff-primary: 'Poppins', sans-serif;;
+
+  --fw-regular: 400;
+  --fw-bold: 800;
+
+  --fs-700: 1.5rem;
+  --fs-800: 2rem;
+  --fs-900: 3rem;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--clr-background);
+  font-family: var(--ff-primary);
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--clr-transparent);
+  padding: 1.5rem;
+  border-radius: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  font-size: var(--fs-900);
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary);
+  margin-bottom: 2rem;
+}
+
+.quote {
+  font-size: var(--fs-800);
+  font-weight: var(--fw-regular);
+  margin-bottom: 1rem;
+}
+
+span {
+  color: var(--clr-primary);
+  font-size: var(--fs-900);
+  font-weight: var(--fw-bold);
+}
+
+.author {
+  font-size: var(--fs-700);
+  color: var(--clr-secondary);
+  font-weight: var(--fw-bold);
+  margin-bottom: 3rem;
+}
+
+.button {
+  background: var(--clr-background);
+  color: var(--clr-transparent);
+  border: 0;
+  padding: 0.875rem 1.5rem;
+  border-radius: 10px;
+  font-size: var(--fs-700);
+  font-weight: var(--fw-regular);
+  cursor: pointer;
+}
+
+.button--animated {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.button--animated:hover {
+  background-color: #F86F03;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 400px;
+  }
+
+  .heading {
+    font-size: 2.375rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    max-width: 400px;
+  }
+
+  .quote {
+    font-size: 1.5rem;
+  }
+
+  .author {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .quote {
+    font-size: 1.25rem;
+  }
+
+  .author {
+    font-size: 1rem;
+  }
+
+  .button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .heading {
+    font-size: 1.75rem;
+  }
+
+  .quote {
+    font-size: 1rem;
+  }
+
+  span {
+    font-size: 1.75rem;
+  }
+
+  .author {
+    font-size: 0.875rem;
+  }
+}
